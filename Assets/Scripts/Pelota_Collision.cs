@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pelota_Collision : Points_Controller
+public class Pelota_Collision : MonoBehaviour
 {
     public ParticleSystem ps;
+
+    public Points_Controller points;
 
     void OnCollisionEnter(Collision col)
     {
@@ -16,7 +18,8 @@ public class Pelota_Collision : Points_Controller
                 Quaternion.identity
                 );
             Destroy(col.gameObject);
-            GanarPuntos();
+            col.transform.SetParent(null);
+            points.GanarPuntos();
         }
     }
 }

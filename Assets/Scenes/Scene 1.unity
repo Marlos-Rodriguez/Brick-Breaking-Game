@@ -153,6 +153,8 @@ MonoBehaviour:
   textMesh: {fileID: 680805579}
   ball: {fileID: 1277586041}
   bar: {fileID: 1362250579}
+  gameover: {fileID: 1213168261}
+  sceneController: {fileID: 10571751}
 --- !u!4 &10571750
 Transform:
   m_ObjectHideFlags: 0
@@ -3605,7 +3607,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -100.88145, w: 6.553316}
+  m_margin: {x: 0, y: 0, z: -179.67635, w: 6.553316}
   m_textInfo:
     textComponent: {fileID: 1251986935}
     characterCount: 9
@@ -3652,6 +3654,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1251986935}
+  nivelCompletado: {fileID: 1036051826}
+  juegoCompletado: {fileID: 52790704}
+  SceneController: {fileID: 10571751}
+  pelota: {fileID: 1277586041}
+  bar: {fileID: 1362250579}
+  bloques: {fileID: 476334806}
 --- !u!1 &1277586035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,8 +3797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d4da830835042428b723fb65f30ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1251986935}
   ps: {fileID: 6699564594937423344, guid: c475b052cf134e04b96263ac0ce7d3a2, type: 3}
+  points: {fileID: 0}
 --- !u!1 &1314116070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,7 +3943,7 @@ GameObject:
   - component: {fileID: 1362250579}
   - component: {fileID: 1362250580}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
