@@ -48,7 +48,7 @@ public class Pelota_Controller : MonoBehaviour
         transform.position = posicionInicial;
     }
 
-    void StopMove()
+    public void StopMove()
     {
         rb.isKinematic = true;
         rb.velocity = Vector3.zero;

@@ -11,6 +11,9 @@ public class Lifes_Controller : MonoBehaviour
     public Pelota_Controller ball;
     public Bar_Controller bar;
 
+    public GameObject gameover;
+    public Scene_Controller sceneController;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,7 +22,19 @@ public class Lifes_Controller : MonoBehaviour
 
     public void LessLifes()
     {
+        if (Lifes_Controller.lifes <= 0) return;
+
         Lifes_Controller.lifes--;
+
+        if (Lifes_Controller.lifes <= 0)
+        {
+            gameover.SetActive(true);
+            ball.StopMove();
+            bar.enabled = false;
+
+            sceneController.Loadlevel();
+        }
+
         bar.Reset();
         ball.Reset();
         ResetUILifes();
