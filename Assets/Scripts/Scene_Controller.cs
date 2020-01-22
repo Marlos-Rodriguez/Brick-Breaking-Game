@@ -17,6 +17,10 @@ public class Scene_Controller : MonoBehaviour
     IEnumerator Load()
     {
         yield return new WaitForSeconds(retraso);
+        if(!LastLevel())
+        {
+            Lifes_Controller.lifes++;
+        }
         SceneManager.LoadScene(next_Level);
     }
 

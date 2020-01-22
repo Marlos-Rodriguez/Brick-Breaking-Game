@@ -6,7 +6,7 @@ using TMPro;
 
 public class Lifes_Controller : MonoBehaviour
 {
-    public static int lifes = 30;
+    public static int lifes = 5;
     public TextMeshProUGUI textMesh;
     public Pelota_Controller ball;
     public Bar_Controller bar;
