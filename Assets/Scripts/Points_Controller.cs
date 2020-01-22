@@ -19,6 +19,10 @@ public class Points_Controller : MonoBehaviour
 
     public Transform bloques;
 
+    public Sound_Controller sound;
+
+    public AudioSource music;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,8 @@ public class Points_Controller : MonoBehaviour
             if(SceneController.LastLevel())
             {
                 juegoCompletado.SetActive(true);
+                music.Stop();
+                sound.SoundPlay(3);
             }
             else 
             {

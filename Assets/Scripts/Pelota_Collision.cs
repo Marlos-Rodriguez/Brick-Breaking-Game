@@ -8,6 +8,13 @@ public class Pelota_Collision : MonoBehaviour
 
     public Points_Controller points;
 
+    private Sound_Controller sound;
+
+    private void Awake()
+    {
+        sound = GetComponent<Sound_Controller>();
+    }
+
     void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.tag == "Cube")
@@ -20,6 +27,11 @@ public class Pelota_Collision : MonoBehaviour
             Destroy(col.gameObject);
             col.transform.SetParent(null);
             points.GanarPuntos();
+            sound.SoundPlay(1);
+        }
+        else
+        {
+            sound.SoundPlay(0);
         }
     }
 }
