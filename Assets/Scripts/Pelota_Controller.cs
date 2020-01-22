@@ -14,6 +14,8 @@ public class Pelota_Controller : MonoBehaviour
 
     public Transform barra;
 
+    public Interactives_Buttons touch;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,7 +31,7 @@ public class Pelota_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!inGame && Input.GetButtonDown("Fire1"))
+        if (!inGame && (Input.GetButtonDown("Fire1") || touch.touch))
         {
             inGame = true;
 
