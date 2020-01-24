@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1362250579}
-  direccion: 0
+  direccion: 1
   touch: 0
 --- !u!114 &187943596
 MonoBehaviour:
@@ -3422,7 +3422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadInicial: 600
   barra: {fileID: 1362250578}
-  touch: {fileID: 0}
+  touch: {fileID: 1420137961}
 --- !u!114 &1277586042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5500,7 +5500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1362250579}
-  direccion: 0
+  direccion: -1
   touch: 0
 --- !u!114 &1970065814
 MonoBehaviour:

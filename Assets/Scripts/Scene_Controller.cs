@@ -19,7 +19,7 @@ public class Scene_Controller : MonoBehaviour
         yield return new WaitForSeconds(retraso);
         if(!LastLevel())
         {
-            Lifes_Controller.lifes++;
+            Lifes_Controller.lifes = 5;
         }
         SceneManager.LoadScene(next_Level);
     }
@@ -44,5 +44,6 @@ public class Scene_Controller : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Scene 1");
+        Lifes_Controller.lifes = 5;
     }
 }
