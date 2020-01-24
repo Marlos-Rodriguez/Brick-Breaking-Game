@@ -11,6 +11,11 @@ public class Bar_Controller : MonoBehaviour
     float posX;
     Vector3 posicionInicial;
 
+    public float direccion;
+
+    public Interactives_Buttons left;
+    public Interactives_Buttons right;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,8 +25,7 @@ public class Bar_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        posX = Mathf.Clamp(transform.position.x + (horizontalInput * velocity * Time.deltaTime), -8, 8);
+        posX = Mathf.Clamp(transform.position.x + (direccion * velocity * Time.deltaTime), -8, 8);
         transform.position = new Vector3(posX, transform.position.y, transform.position.z);
     }
 
